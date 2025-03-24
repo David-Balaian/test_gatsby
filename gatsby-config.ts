@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
     resolve: 'gatsby-source-wordpress',
     options: {
       schema: {
-        timeout: 100000,
+        timeout: 300000,
       },  
       "url": "https://wp.volo.global/graphql"
     }
