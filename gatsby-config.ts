@@ -17,7 +17,7 @@ const config: GatsbyConfig = {
       },  
       "url": "https://wp.volo.global/graphql"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap",
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap", `gatsby-plugin-cloudflare-pages`,
   {
     resolve: "gatsby-plugin-google-gtag",
     options: {
