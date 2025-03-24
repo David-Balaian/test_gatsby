@@ -12,9 +12,18 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": "asd"
+      "url": "https://wp.volo.global/graphql"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", {
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sitemap",
+  {
+    resolve: "gatsby-plugin-google-gtag",
+    options: {
+      trackingIds: [
+        process.env.GOOGLE_GTAG || "asd",
+      ],
+    }
+  }, 
+  {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
