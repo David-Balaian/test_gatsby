@@ -1,0 +1,125 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  width: 104px;
+  height: 47px;
+  object-fit: cover;
+}
+
+.nav {
+  display: flex;
+  padding: 0 45px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.nav-item {
+  /*position: relative;*/
+  padding: 40px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-item > span {
+  transition: color 0.3s ease;
+}
+
+.nav-item > div {
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+.nav-item:hover > span {
+  color: #007acc;
+}
+
+.menu-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  z-index: 99;
+}
+
+.image-section {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  flex-shrink: 0;
+}
+
+.redirectArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #01b8ec;
+  background-image: url("data:image/svg+xml,%3csvg%20width='25'%20height='20'%20viewBox='0%200%2025%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.9122%201L24%2010L14.9122%2019M22.286%2010.0408H1'%20stroke='%230DB4E8'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e");
+  background-size: 42%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.image-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.image-section p {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.links-section,
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.group h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.group a,
+.links-section a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.group a:hover,
+.links-section a:hover {
+  color: #007acc;
+}

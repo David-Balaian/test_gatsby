@@ -41,7 +41,7 @@ interface ServicesData {
 
 const ServicesComponent: React.FC<{ data: ServicesData }> = ({ data }) => {
   const { industries, services } = data;
-
+  console.log({data})
   return (
     <div className="services-container">
       {/* Industries Section */}

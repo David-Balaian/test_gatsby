@@ -18,12 +18,12 @@ export const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }
     return (
         // <SEOContext.Provider value={{ global: seo }}>
         <div>
-            <header>Main Site Header</header>
+            {/*<header>Main Site Header</header>*/}
             <nav>
                 <Header />
             </nav>
-            <main style={{ minHeight: "200px", padding: "50px" }} >{children}</main>
-            <footer>Main Footer</footer>
+            <main style={{ minHeight: "200px" }} >{children}</main>
+            {/*<footer>Main Footer</footer>*/}
         </div>
         // {/* </SEOContext.Provider> */}
     );
