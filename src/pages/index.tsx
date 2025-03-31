@@ -15,7 +15,7 @@ const headingAccentStyles = {
   color: "#663399",
 }
 
-const IndexPage: React.FC<PageProps> = ({ data }) => {
+const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
@@ -23,7 +23,6 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
     </main>
   )
 }
@@ -31,15 +30,3 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 export default IndexPage
 
 export const Head: HeadFC = () => <title>Home Page</title>
-export const query = graphql`
-  query {
-    allWpPost {
-      nodes {
-        title
-        testForm {
-          testField
-        }
-      }
-    }
-  }
-`

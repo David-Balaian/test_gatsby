@@ -1,20 +1,34 @@
-import { GatsbyNode } from "gatsby"
+// import { GatsbyNode } from "gatsby"
 
-export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = ({ actions }) => {
-    actions.createTypes(`
-      type Query {
-        site: Site!
-      }
+// export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = ({ actions }) => {
+//   actions.createTypes(`
 
-      type Site {
-        siteMetadata: SiteMetadata!
-      }
-  
-      type SiteMetadata {
-        title: String!
-      }
-    `)
-}
+//     interface WpHeaderServices_Layout {
+//         fieldGroupName: String
+//       }
+//         interface WpDynamicServicesPageDynamicSections_Layout {
+//         fieldGroupName: String
+//       }
+
+//       interface WpDynamicServicesPageDynamicSectionsSectionLayout_Fields {
+//         fieldGroupName: String
+//       }
+        
+//       type WpDynamicServicesPageDynamicSectionsSectionLayout implements WpDynamicServicesPageDynamicSections_Layout & WpHeaderServices_Layout {
+//       fieldGroupName: String
+//       sectionTitle: String
+//       sectionItems: [WpDynamicServicesPageDynamicSectionsSectionItems]
+//     }
+
+//     type WpDynamicServicesPageDynamicSectionsSectionItems {
+//       fieldGroupName: String
+//       itemName: String
+//       itemUrl: String
+//     }
+
+
+//     `)
+// }
 
 // const path = require(`path`)
 // const { slash } = require(`gatsby-core-utils`)

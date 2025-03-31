@@ -14,7 +14,6 @@ const About: React.FC<PageProps<AboutPageData>> = ({ data }) => {
     <>
       <h2>about</h2>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      <div dangerouslySetInnerHTML={{ __html: data?.allWpPage?.nodes?.[0]?.content }} />
     </>
   )
 }

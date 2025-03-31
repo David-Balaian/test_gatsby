@@ -1,0 +1,124 @@
+.services-container {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Industries Section */
+  .industries-section {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+  
+  .industry-content {
+    display: flex;
+    flex: 2;
+    gap: 20px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .industry-text {
+    flex: 1;
+  }
+  
+  .industry-text h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .industry-text p {
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .industry-image {
+    flex: 1;
+  }
+  
+  .industry-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .industry-links {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .industry-links h3 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .industry-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .industry-links li {
+    margin-bottom: 10px;
+  }
+  
+  .industry-links a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .industry-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Services Section */
+  .services-section {
+    margin-top: 40px;
+  }
+  
+  .services-section h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-category {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .service-category h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .service-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-category li {
+    margin-bottom: 10px;
+  }
+  
+  .service-category a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .service-category a:hover {
+    text-decoration: underline;
+  }
