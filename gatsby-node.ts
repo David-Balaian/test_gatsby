@@ -69,3 +69,40 @@
 //   })
 // }
 
+
+import { GatsbyNode } from "gatsby"
+import path from "path"
+
+export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const result = await graphql<{
+    allWpPost: {
+      nodes: {
+        slug: string
+      }[]
+    }
+  }>(`
+    query GetPostByCategory {
+      allWpPost(filter: { categories: { nodes: { elemMatch: { name: { eq: "Blog" } } } } }) {
+        nodes {
+          slug
+        }
+      }
+    }
+  `)
+  console.log({karren: result})
+  if (result.errors) {
+    throw new Error(result.errors.join("\n"))
+  }
+
+  result.data?.allWpPost.nodes.forEach(post => {
+    createPage({
+      path: `/blogs/${post.slug}`,
+      component: path.resolve(`./src/templates/Blogs/index.tsx`),
+      context: {
+        slug: post.slug,
+      },
+    })
+  })
+}

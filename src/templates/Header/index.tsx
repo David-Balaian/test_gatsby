@@ -29,9 +29,15 @@ const Header = (props: Props) => {
               redirecturl
               title
               description
+              
               image {
                 node {
-                  publicUrl
+                  id
+                  gatsbyImage(
+                    formats: WEBP
+                    width: 220
+                    placeholder: DOMINANT_COLOR
+                  )
                 }
               }
             }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
+import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
 
 interface Link {
   target: string;
@@ -17,7 +18,8 @@ interface ExtendedMenuItem {
     description: string;
     image: {
       node: {
-        publicUrl: string;
+        id: string;
+        gatsbyImage: IGatsbyImageData;
       };
     };
   };
@@ -52,14 +54,22 @@ const Nav: React.FC<Props> = ({
   const handleMouseLeave = () => {
     setActiveMenu(null);
   };
-
   const renderExtendedMenu = (item: ExtendedMenuItem) => (
     <div className="menu-content">
       <div className="image-section">
-          <img
-            src={item.imagecontainer.image.node.publicUrl}
+          {/*<img*/}
+          {/*  src={item.imagecontainer.image.node.publicUrl}*/}
+          {/*  alt={item.imagecontainer.title}*/}
+          {/*/>*/}
+        {item.imagecontainer.image.node &&
+
+          <GatsbyImage
+            image={item.imagecontainer.image.node.gatsbyImage}
             alt={item.imagecontainer.title}
-          />
+            className="gatsby-image"
+            style={{width: "600px", height: "100%"}}
+           />
+        }
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h4>{item.imagecontainer.title}</h4>
